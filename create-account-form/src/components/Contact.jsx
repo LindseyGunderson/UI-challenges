@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { mobile } from '../responsive';
 
+import { largermobile } from '../responsive';
+
 import { tablet } from '../responsive';
 
 const Container = styled.div`
@@ -20,16 +22,24 @@ const Container = styled.div`
 const Wrapper = styled.div`
 
     background-color: #fff;
-    width: 50%;
+    width: 70%;
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+
+    ${tablet({ width: "90%" })}
+
+    ${largermobile({ flexDirection: "column", width: "80%", })}
+
+    ${mobile({ flexDirection: "column", width: "100%" })}
 
 `;
 
 const ImgDiv = styled.div`
 
     flex: 1;
+
 
 `;
 
@@ -39,6 +49,9 @@ const Image = styled.img`
     height: 100%;
     object-fit: fill;
 
+    ${largermobile({ height: "75%" })}
+
+    ${mobile({ height: "80%" })}
 `;
 
 const Title = styled.h1`
@@ -46,6 +59,10 @@ const Title = styled.h1`
     font-size: 30px;
     color: #5E6472;
     font-weight: 300;
+
+    ${largermobile({ fontSize: "22px" })}
+
+    ${mobile({ fontSize: "20px", fontWeight: "700" })}
 
 `;
 
@@ -59,6 +76,11 @@ const FormDiv = styled.div`
     padding: 2.5rem;
     text-align: center;
 
+    ${largermobile({ padding: "1.5rem" })}
+
+    ${mobile({ padding: "1rem"})}
+
+
 
 `;
 
@@ -68,6 +90,9 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
 
+    ${largermobile({ paddingTop: "1rem" })}
+
+    ${mobile({ paddingTop: "0" })}
 
 `;
 
@@ -75,15 +100,22 @@ const Description = styled.p`
 
     font-size: 16px;
     margin-top: 0.5rem;
+
+    ${largermobile({ fontSize: "14px" })}
+
+    ${mobile({ fontSize: "13px" })}
     
 `;
 
 const Input = styled.input`
 
-    flex: 1;
     min-width: 40%;
     margin: 20px 10px 0 0;
     padding: 8px;
+
+    ${largermobile({ margin: "12px 8px 0 0", width: "100%" })}
+
+    ${mobile({ margin: "10px 5px 0 0" })}
 
 `;
 
@@ -99,6 +131,10 @@ const Button = styled.button`
     font-size: 16px;
     font-weight: 600;
 
+    ${tablet({ width: "70%" })}
+
+    ${largermobile({ width: "100%" })}
+
 
 `;
 
@@ -106,6 +142,8 @@ const Links = styled.a`
 
     color: #d87c73;
     text-decoration: underline;
+
+    ${mobile({ fontSize: "13px" })}
 
 
 `;
