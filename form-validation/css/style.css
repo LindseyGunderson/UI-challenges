@@ -1,7 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container .signup-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.container #signup-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 400px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+.container #signup-form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+.container #signup-form div i {
+  position: absolute;
+  padding: 10px;
+}
+.container #signup-form div .failure-icon {
+  color: red;
+}
+.container #signup-form div .success-icon {
+  color: green;
+}
+.container #signup-form div .failure-icon, .container #signup-form div .success-icon {
+  right: 0;
+  opacity: 0;
+}
+.container #signup-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+.container #signup-form input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #ccc;
+  padding: 0 35px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container #signup-form input:focus {
+  border: 2px solid #f2796e;
+}
+.container #signup-form button {
+  width: 100%;
+  height: 40px;
+  background-color: pink;
+  border: 2px solid pink;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.container #signup-form button:hover {
+  opacity: 0.8;
 }
 /*# sourceMappingURL=style.css.map */
