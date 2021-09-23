@@ -14,6 +14,9 @@
       crossorigin="anonymous"
     />
 
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     
@@ -25,10 +28,63 @@
                 Get Started Today
             </div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <!-- username div -->
+            <div>
+
+                <label for="username">User Name</label>
+                <i class="fas fa-user"></i>
+
+                <input type="text"
+                        name="username"
+                        id="username"
+                        placeholder="John Snow"
+
+                >
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+            </div>
+
+            <!-- Email div -->
+            <div>
+
+                <label for="email">Email</label>
+                <i class="far fa-envelope"></i>
+
+                <input 
+                    type="text"
+                    name="email"
+                    id="email"
+                    placeholder="johnsnow@gmail.com"
+                
+                >
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+            </div>
+
+            <!-- Password div -->
+            <div>
+
+                <label for="password">Password</label>
+                <i class="fas fa-lock"></i>
+
+                <input 
+                    type="text"
+                    name="password"
+                    id="passwrd"
+                    placeholder="Enter Password"
+                
+                >
+
+                <i class="fas fa-exclamation-circle failure-icon"></i>
+                <i class="far fa-check-circle success-icon"></i>
+
+            </div>
+
+            <button id="signup-btn" type="submit">Sign Up</button>
 
         </form>
 
