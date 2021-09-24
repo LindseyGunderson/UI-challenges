@@ -22,6 +22,19 @@
     
     <div class="container">
 
+        <div class="content">
+
+            <h1 class="text">
+
+                Join A Community Of Gamers <br>
+                Sign Up for Free Today!
+
+            </h1>
+        </div>
+
+
+
+        <!-- form section -->
         <form id="signup-form">
 
             <div class="signup-title">
@@ -44,6 +57,8 @@
                 <i class="fas fa-exclamation-circle failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
 
+                <div class="error-msg"></div>
+
             </div>
 
             <!-- Email div -->
@@ -63,6 +78,8 @@
                 <i class="fas fa-exclamation-circle failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
 
+                <div class="error-msg"></div>
+
             </div>
 
             <!-- Password div -->
@@ -74,7 +91,7 @@
                 <input 
                     type="text"
                     name="password"
-                    id="passwrd"
+                    id="password"
                     placeholder="Enter Password"
                 
                 >
@@ -82,16 +99,46 @@
                 <i class="fas fa-exclamation-circle failure-icon"></i>
                 <i class="far fa-check-circle success-icon"></i>
 
+                <div class="error-msg"></div>
+
             </div>
 
             <button id="signup-btn" type="submit">Sign Up</button>
+
+
+            
+      <div class="socials">
+
+        <span> OR </span>
+
+        <div class="account">
+                        Already have an Account? <br>
+                        <span>Sign In</span>
+        </div>
+
+        <div class="social-btns">
+           
+            <div class="google-btn">
+                <img src="https://cdn.icon-icons.com/icons2/2108/PNG/512/google_icon_130924.png" alt="" srcset="">
+                Sign Up
+            </div>
+            
+            <div class="facebook">
+                <img src="https://www.dlrcoco.ie/sites/default/files/facebook-512.png" alt="" srcset="">
+                Sign Up
+            </div>
+        </div>
+
+      </div>
+
 
         </form>
 
 
     </div>
 
-
+<!-- import js scripts for validation -->
+<script src="js/validation.js"></script>
 
 </body>
 </html>
