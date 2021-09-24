@@ -218,13 +218,18 @@ body {
             flex-direction: column;
   }
   .container .content {
-    height: 20vh;
+    height: 30vh;
   }
   .container .content h1 {
     margin: 10%;
   }
   .container #signup-form, .container .content {
     width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  .container #signup-form {
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
