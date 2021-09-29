@@ -30,7 +30,7 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 55%;
-  min-height: 100vh;
+  height: 100vh;
   padding: 10px 20px;
   background-image: url("https://images.unsplash.com/photo-1567027757540-7b572280fa22?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1587&q=80");
   background-repeat: no-repeat;
@@ -228,6 +228,9 @@ body {
   }
 }
 @media (max-width: 425px) {
+  .container .content h1 {
+    font-size: 20px;
+  }
   .container #signup-form {
     padding: 20px;
   }
