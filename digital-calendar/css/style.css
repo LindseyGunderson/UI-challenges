@@ -7,6 +7,10 @@
 
 body {
   background-color: #ccc;
+}
+
+.calendar-container {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,7 +25,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .calendar-container .calendar {
   position: relative;
   background-color: #fff;
@@ -51,7 +54,8 @@ body {
           box-sizing: border-box;
 }
 .calendar-container .calendar .date .month-title {
-  background-color: #ccc;
+  background-color: #000;
+  color: #fff;
   width: 275px;
   margin-left: -45px;
 }
@@ -66,6 +70,9 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+.calendar-container .calendar .date .days-container .days .day {
+  font-weight: bold;
 }
 .calendar-container .calendar .date .days-container .days .day, .calendar-container .calendar .date .days-container .days .number {
   width: 48px;
@@ -106,7 +113,7 @@ body {
 .calendar-container .calendar .current-date div {
   position: relative;
   width: 175px;
-  background-color: #ccc;
+  background-color: #2c2c2c;
   text-align: center;
   border-radius: 8px;
 }
@@ -123,17 +130,70 @@ body {
 .calendar-container .calendar .current-date div .week-name {
   margin-top: 10px;
   font-size: 18px;
-  color: #6b6b6b;
+  color: #c2c2c2;
 }
 .calendar-container .calendar .current-date div .day-number {
   margin-top: 10px;
   font-size: 60px;
   font-weight: 700;
   line-height: 1em;
+  color: #fff;
 }
 .calendar-container .calendar .current-date div .year {
   font-size: 18px;
   font-weight: 500;
   padding-bottom: 20px;
+  color: #c2c2c2;
+}
+
+@media (max-width: 768px) {
+  .calendar-container .calendar {
+    width: 400px;
+    height: 700px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .calendar-container .calendar .date {
+    width: 400px;
+    height: 60%;
+    text-align: center;
+  }
+  .calendar-container .calendar .date .month-title {
+    background-color: #000;
+    color: #fff;
+    width: auto;
+    margin-left: 0;
+  }
+  .calendar-container .calendar .current-date {
+    width: 100%;
+  }
+  .calendar-container .calendar .current-date div {
+    position: relative;
+    width: 150px;
+    background-color: #2c2c2c;
+    text-align: center;
+    border-radius: 8px;
+  }
+  .calendar-container .calendar .current-date div .month-name {
+    position: relative;
+    padding: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 16px;
+  }
+  .calendar-container .calendar .current-date div .week-name {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .calendar-container .calendar .current-date div .day-number {
+    margin-top: 5px;
+    font-size: 40px;
+  }
+  .calendar-container .calendar .current-date div .year {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

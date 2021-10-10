@@ -1,3 +1,32 @@
+// breakpoints for different screens
+$bp : (
+
+mobile : 480px,
+tablet : 768px,
+desktop : 1440px
+
+);
+
+
+@mixin query($screen) {
+
+    @each $key, $value in $bp {
+
+        @if($screen == $key){
+
+            @media(max-width : $value){
+
+                @content
+            }
+
+        }
+
+    }
+
+}
+
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,14 +37,16 @@
 body {
 
     background-color: #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
 }
 
 .calendar-container {
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .calendar {
 
@@ -38,7 +69,8 @@ body {
             box-sizing: border-box;
 
             .month-title {
-                background-color: #ccc;
+                background-color: #000;
+                color: #fff;
                 width: 275px;
                 margin-left: -45px;
 
@@ -58,6 +90,11 @@ body {
 
                     display: flex;
                     flex-wrap: wrap;
+
+                    .day {
+
+                        font-weight: bold;
+                    }
 
                     .day, .number {
 
@@ -97,7 +134,7 @@ body {
 
                 position: relative;
                 width: 175px;
-                background-color: #ccc;
+                background-color: rgb(44, 44, 44);
                 text-align: center;
                 border-radius: 8px;
 
@@ -118,7 +155,7 @@ body {
 
                     margin-top: 10px;
                     font-size: 18px;
-                    color: rgb(107, 107, 107);
+                    color: rgb(194, 194, 194);
 
                 }
 
@@ -128,6 +165,7 @@ body {
                     font-size: 60px;
                     font-weight: 700;
                     line-height: 1em;
+                    color: #fff;
 
                 }
 
@@ -136,6 +174,7 @@ body {
                     font-size: 18px;
                     font-weight: 500;
                     padding-bottom: 20px;
+                    color: rgb(194, 194, 194);
 
                 }
 
@@ -145,4 +184,87 @@ body {
 
     }
 
+}
+
+@include query(tablet){
+
+    
+.calendar-container {
+
+
+    .calendar {
+
+        width: 400px;
+        height: 700px;
+
+        flex-direction: column-reverse;
+        // justify-content: center;
+
+            .date {
+
+                width: 400px;
+                height: 60%;
+                text-align: center;
+
+                .month-title {
+
+                    background-color: #000;
+                    color: #fff;
+                    width: auto;
+                    margin-left: 0;
+
+                }
+
+        }
+
+        .current-date {
+
+            width: 100%;
+            
+            div {
+    
+                position: relative;
+                width: 150px;
+                background-color: rgb(44, 44, 44);
+                text-align: center;
+                border-radius: 8px;
+    
+                .month-name {
+    
+                    position: relative;
+                    padding: 5px;
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;
+                    font-size: 16px;
+    
+                }
+    
+                .week-name {
+    
+                    margin-top: 10px;
+                    font-size: 14px;
+    
+                }
+    
+                .day-number {
+    
+                    margin-top: 5px;
+                    font-size: 40px;
+    
+                }
+    
+                .year {
+    
+                    font-size: 16px;
+                    padding-bottom: 10px;
+    
+                }
+    
+            }
+    
+        }
+    
+    }
+
+    }
 }

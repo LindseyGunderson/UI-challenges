@@ -1,29 +1,25 @@
-var weekNameList = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
 
-// var month = document.getElementById("monthName"),
-//     week = document.getElementById("weekName"),
-//     day = document.getElementById("dayName"),
-//     year = document.getElementById("year");
 
-// function getCurrentDate() {
 
-//     let date = new Date();
+function getCurrentDate(){
 
-//     let getDayNumber = date.getDate();
+    const lang = navigator.language;
 
-//     let getMonth = date.getMonth();
+    let date = new Date();
 
-//     let getDayName = date.toLocaleDateString(land, {weekday: 'long'});
+    let dayNumber = date.getDate();
+    let month = date.getMonth() + 1;
+    let dayName = date.toLocaleDateString(lang, {weekday: 'long'});
+    let monthName = date.toLocaleDateString(lang, {month: 'long'});
+    let year = date.getFullYear();
 
-//     let getMonthName = date.toLocaleDateString(land, {month: 'long'});
+    document.getElementById("monthName").innerHTML = monthName;
+    document.getElementById("weekName").innerHTML = dayName;
+    document.getElementById("dayNumber").innerHTML = dayNumber;
+    document.getElementById("year").innerHTML = year;
 
-//     let getYear = date.getFullYear();
+    // var daysInMonth = new Date(year, month, 0).getDate();
 
-//     month.innerHTML = getMonthName;
-//     week.innerHTML = getDayName;
-//     day.innerHTML = getDayNumber;
-//     year.innerHTML = getYear;
+}
 
-// }
-
-// getCurrentDate();
+getCurrentDate();
