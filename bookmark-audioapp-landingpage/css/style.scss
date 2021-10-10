@@ -1,0 +1,210 @@
+// import font
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap');
+
+// font family
+$ff-epilogue: 'Epilogue', sans-serif;
+
+// font weights
+$fw-400: 400;
+$fw-700: 700;
+
+// color palette
+$clr-primary-blue: #023E8A;
+$clr-primary-white: #E5E7E6;
+$clr-primary-black: #1D1E18;
+$clr-accent-grey: #333333;
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $ff-epilogue;
+}
+
+.container {
+
+    position: relative;
+    background: linear-gradient(120deg, $clr-primary-white, $clr-primary-white 62%, $clr-primary-blue 62%, $clr-primary-blue 100%);
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+
+
+    // navigation styling
+    .nav {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 30px;
+
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+
+            transition: all 0.3s ease-in-out;
+
+            .logo {
+
+                width: 30px;
+                transition: all 0.3s ease-in-out;
+                
+                &:hover {
+
+                    transform: scale(1.1);
+
+                }
+
+            }
+
+        }
+
+
+            ul {
+
+                display: flex;
+
+                li {
+
+                    list-style: none;
+                    margin: 0 10px;
+                    border-bottom: 2px solid transparent;
+                    transition: all 0.3s ease-in-out;
+                    
+                    &:hover {
+
+                        border-bottom: 2px solid $clr-primary-blue;
+
+                    }
+
+                    a {
+
+                        text-decoration: none;
+                        color: $clr-primary-black;
+
+                        &:hover {
+
+                            color:$clr-primary-blue;
+                            border-bottom: 2px solid $clr-primary-blue;
+                            transition: all 0.3s ease-in-out;
+
+                        }
+                    }
+
+
+                }
+
+            }
+
+            // download button
+            .download-btn {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                text-decoration: none;
+                background-color: $clr-primary-black;
+                border: 2px solid $clr-primary-black;
+                color: $clr-primary-white;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+                &:hover {
+
+                    background-color: $clr-primary-white;
+                    border: 2px solid $clr-primary-black;
+                    color: $clr-primary-black;
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                }
+
+                .icon {
+
+                    margin-left: 5px;
+                    font-size: 1.4em;
+                }
+
+            }
+    }
+
+    // app text
+    .app-content {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .content-text {
+
+            max-width: 800px;
+
+            h2 {
+                font-size: 6em;
+                color: $clr-primary-blue;
+            }
+
+            p {
+
+                font-size: 1.1em;
+                line-height: 1.6em;
+                color: $clr-accent-grey;
+
+            }
+
+            h3 {
+
+                color: $clr-primary-black;
+                margin: 20px 0;
+
+            }
+
+            .store-btn {
+
+                display: inline-flex;
+                text-decoration: none;
+                background-color: $clr-primary-black;
+                border: 2px solid transparent;
+                color: $clr-primary-white;
+                font-size: 1.1em;
+                padding: 10px 15px;
+                border-radius: 5px;
+                margin-right: 10px;
+
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    
+                    background-color: $clr-primary-white;
+                    border: 2px solid $clr-primary-black;
+                    color: $clr-primary-black;
+                }
+
+                ion-icon {
+
+                    margin-right: 5px;
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+.active {
+
+    font-weight: bolder;
+
+}
