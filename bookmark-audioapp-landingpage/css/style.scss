@@ -22,10 +22,11 @@ $clr-accent-grey: #333333;
     font-family: $ff-epilogue;
 }
 
+
 .container {
 
     position: relative;
-    background: linear-gradient(120deg, $clr-primary-white, $clr-primary-white 62%, $clr-primary-blue 62%, $clr-primary-blue 100%);
+    background: linear-gradient(120deg, #fff, $clr-primary-white 62%, $clr-primary-blue 62%, $clr-primary-blue 100%);
     min-height: 100vh;
     padding: 0 100px;
     display: flex;
@@ -226,8 +227,8 @@ $clr-accent-grey: #333333;
 
         .active-dot {
 
-            background-color: $clr-primary-white;
-        }
+    background-color: $clr-primary-white;
+}
 
     }
 
@@ -240,7 +241,29 @@ $clr-accent-grey: #333333;
 
     }
 
+    .socials {
+
+        position: absolute;
+        bottom: 30px;
+        display: flex;
+        flex-direction: row;
+
+        a {
+
+            margin-right: 20px;
+            font-size: 1.8em;
+            color:$clr-primary-black;
+            transition: transform 0.4s ease-in-out;
+            
+            &:hover {
+
+                color: $clr-primary-blue;
+                transform: scale(1.2);
+            }
+        }
+    }
 }
+
 
 
 

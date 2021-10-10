@@ -9,7 +9,7 @@
 
 .container {
   position: relative;
-  background: linear-gradient(120deg, #E5E7E6, #E5E7E6 62%, #023E8A 62%, #023E8A 100%);
+  background: linear-gradient(120deg, #fff, #E5E7E6 62%, #023E8A 62%, #023E8A 100%);
   min-height: 100vh;
   padding: 0 100px;
   display: -webkit-box;
@@ -192,6 +192,31 @@
   margin-left: 50px;
   margin-right: 100px;
   max-width: 300px;
+}
+.container .socials {
+  position: absolute;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.container .socials a {
+  margin-right: 20px;
+  font-size: 1.8em;
+  color: #1D1E18;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+.container .socials a:hover {
+  color: #023E8A;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .active-slide {
