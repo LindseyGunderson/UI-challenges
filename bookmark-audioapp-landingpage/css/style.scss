@@ -170,7 +170,7 @@ desktop : 1440px
 
         width: 100%;
         display: flex;
-        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
 
         .content-text {
@@ -228,7 +228,7 @@ desktop : 1440px
 
         }
 
-    }
+    
 
     .slider-dots {
 
@@ -279,7 +279,7 @@ desktop : 1440px
         }
 
     }
-
+}
     .socials {
 
         position: absolute;
@@ -303,14 +303,161 @@ desktop : 1440px
     }
 }
 
-
-
-
-
-
-
 .active {
 
     font-weight: bolder;
+
+}
+
+@include query(laptop){
+
+    .container {
+
+        padding: 30px;
+        background: $clr-primary-white;
+
+        .nav {
+
+            padding: 30px;
+
+            ul {
+
+
+            }
+
+            .download-btn {
+
+                display: none;
+
+            }
+
+        }
+
+        .app-content {
+
+            flex-direction: column-reverse;
+            margin: 100px 0;
+
+            .content-text {
+
+                text-align: center;
+
+                h2 {
+
+                    margin-top: 2rem;
+                    font-size: 3em;
+
+                }
+
+                h3 {
+
+                    font-size: 16px;
+                }
+            
+            }
+
+            .slider-dots {
+
+                position: relative;
+                top: initial;
+                transform: none;
+                right: initial;
+                display: flex;
+                flex-direction: row;
+                margin-top: 15px;
+
+                .dot {
+
+                    background-color: $clr-primary-blue;
+                    opacity: 0.3;
+
+                }
+
+                .active-dot {
+
+                    opacity: 1;
+
+                }
+
+        }
+
+        .app-demo {
+
+            img {
+
+                margin: 0;
+            }
+        }
+ }
+        .socials {
+
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+    }
+
+
+}
+
+@include query(mobile){
+
+    .container {
+
+        padding: 0;
+        width: 100%;
+        background-color: #fff;
+        margin: 5px;
+
+        .nav {
+
+            padding: 5px;
+
+            ul {
+
+                display: none;
+            }
+
+            .hamburger {
+
+                // display: block;
+            }
+
+        }
+
+        .app-content {
+            text-align: center;
+            margin: 0;
+
+            .content-text {
+                margin: 0 50px;
+
+                h2 {
+
+                    font-size: 2em;
+
+                }
+            
+            }
+
+
+        .app-demo {
+
+            img {
+
+                margin: 0;
+            }
+        }
+ }
+        .socials {
+
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+    }
+
 
 }
