@@ -70,16 +70,17 @@ body {
 
             .month-title {
                 background-color: #000;
+                
+                border: 4px double #fff;
                 color: #fff;
                 width: 275px;
                 margin-left: -45px;
 
                 h3 {
 
-                    margin-left: 55px;
+                    margin-left: 54px;
                     font-size: 30px;
                     font-weight: 500;
-                    
 
                 }
             }
@@ -119,9 +120,9 @@ body {
             height: 100%;
             
             background-image: url("../images/halloween-bg.jpg");
-            border: 10px solid #000;
+            border: 7px solid #000;
             background-position: center;
-            background-size: cover;
+            background-size: auto;
             background-repeat: no-repeat;
             margin: auto auto;
 
@@ -130,6 +131,18 @@ body {
             justify-content: center;
             align-items: center;
 
+            h2 {
+
+                text-align: center;
+                background-color: #000;
+                border: 4px double rgb(194, 111, 33);
+
+                color: #fff;
+                margin: 10px;
+                padding: 5px;
+                width: 60%;
+            }
+
             div {
 
                 position: relative;
@@ -137,6 +150,7 @@ body {
                 background-color: rgb(44, 44, 44);
                 text-align: center;
                 border-radius: 8px;
+                border: 4px double rgb(194, 111, 33);
 
                 .month-name {
 
@@ -186,6 +200,17 @@ body {
 
 }
 
+.is-today {
+
+    background-color: #000;
+    border-radius: 10px;
+    border: 4px double #fff;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 22px;
+
+}
+
 @include query(tablet){
 
     
@@ -202,24 +227,65 @@ body {
 
             .date {
 
+                padding: 20px;
                 width: 400px;
                 height: 60%;
-                text-align: center;
+                
 
                 .month-title {
 
                     background-color: #000;
+                    border: 4px double #fff;
                     color: #fff;
-                    width: auto;
-                    margin-left: 0;
+                    width: 100%;
+                    margin: 0;
+
+                    h3 {
+
+                        text-align: center;
+                        margin-left: 0;
+                    }
 
                 }
+
+                
+            .days-container {
+
+                .days {
+
+                 
+                    .day, .number {
+
+                        width:51px;
+                        height:50px;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+ 
+
+                    }
+
+                }
+
+            }
 
         }
 
         .current-date {
 
             width: 100%;
+
+            h2 {
+
+                text-align: center;
+                background-color: #000;
+                border: 4px double rgb(194, 111, 33);
+
+                color: #fff;
+                margin: 10px;
+                padding: 5px;
+                width: 60%;
+            }
             
             div {
     

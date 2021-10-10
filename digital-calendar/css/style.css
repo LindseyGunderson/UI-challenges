@@ -55,12 +55,13 @@ body {
 }
 .calendar-container .calendar .date .month-title {
   background-color: #000;
+  border: 4px double #fff;
   color: #fff;
   width: 275px;
   margin-left: -45px;
 }
 .calendar-container .calendar .date .month-title h3 {
-  margin-left: 55px;
+  margin-left: 54px;
   font-size: 30px;
   font-weight: 500;
 }
@@ -91,9 +92,9 @@ body {
   width: 400px;
   height: 100%;
   background-image: url("../images/halloween-bg.jpg");
-  border: 10px solid #000;
+  border: 7px solid #000;
   background-position: center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   margin: auto auto;
   display: -webkit-box;
@@ -110,12 +111,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+.calendar-container .calendar .current-date h2 {
+  text-align: center;
+  background-color: #000;
+  border: 4px double #c26f21;
+  color: #fff;
+  margin: 10px;
+  padding: 5px;
+  width: 60%;
+}
 .calendar-container .calendar .current-date div {
   position: relative;
   width: 175px;
   background-color: #2c2c2c;
   text-align: center;
   border-radius: 8px;
+  border: 4px double #c26f21;
 }
 .calendar-container .calendar .current-date div .month-name {
   position: relative;
@@ -146,6 +157,15 @@ body {
   color: #c2c2c2;
 }
 
+.is-today {
+  background-color: #000;
+  border-radius: 10px;
+  border: 4px double #fff;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 22px;
+}
+
 @media (max-width: 768px) {
   .calendar-container .calendar {
     width: 400px;
@@ -156,18 +176,45 @@ body {
             flex-direction: column-reverse;
   }
   .calendar-container .calendar .date {
+    padding: 20px;
     width: 400px;
     height: 60%;
-    text-align: center;
   }
   .calendar-container .calendar .date .month-title {
     background-color: #000;
+    border: 4px double #fff;
     color: #fff;
-    width: auto;
+    width: 100%;
+    margin: 0;
+  }
+  .calendar-container .calendar .date .month-title h3 {
+    text-align: center;
     margin-left: 0;
+  }
+  .calendar-container .calendar .date .days-container .days .day, .calendar-container .calendar .date .days-container .days .number {
+    width: 51px;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .calendar-container .calendar .current-date {
     width: 100%;
+  }
+  .calendar-container .calendar .current-date h2 {
+    text-align: center;
+    background-color: #000;
+    border: 4px double #c26f21;
+    color: #fff;
+    margin: 10px;
+    padding: 5px;
+    width: 60%;
   }
   .calendar-container .calendar .current-date div {
     position: relative;
