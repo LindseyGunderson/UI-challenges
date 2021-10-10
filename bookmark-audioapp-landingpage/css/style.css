@@ -178,7 +178,8 @@
 .container .slider-dots .dot {
   position: relative;
   width: 10px;
-  height: 30px;
+  height: 10px;
+  border-radius: 50%;
   margin: 5px;
   background-color: rgba(255, 255, 255, 0.3);
   display: -webkit-inline-box;
@@ -188,10 +189,16 @@
 .container .slider-dots .active-dot {
   background-color: #E5E7E6;
 }
-.container .app-demo {
+.container .app-demo .slides {
   margin-left: 50px;
   margin-right: 100px;
   max-width: 300px;
+  display: none;
+}
+.container .app-demo .active-slide {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  display: block;
 }
 .container .socials {
   position: absolute;
@@ -217,10 +224,6 @@
   color: #023E8A;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-.active-slide {
-  display: block;
 }
 
 .active {

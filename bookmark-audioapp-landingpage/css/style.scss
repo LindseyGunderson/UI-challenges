@@ -14,6 +14,33 @@ $clr-primary-white: #E5E7E6;
 $clr-primary-black: #1D1E18;
 $clr-accent-grey: #333333;
 
+// breakpoints for different screens
+$bp : (
+
+mobile : 480px,
+tablet : 768px,
+laptop: 991px,
+desktop : 1440px
+
+);
+
+@mixin query($screen) {
+
+    @each $key, $value in $bp {
+
+        @if($screen == $key){
+
+            @media(max-width : $value){
+
+                @content
+            }
+
+        }
+
+    }
+
+}
+
 * {
 
     box-sizing: border-box;
@@ -218,7 +245,8 @@ $clr-accent-grey: #333333;
 
         position: relative;
         width: 10px;
-        height: 30px;
+        height: 10px;
+        border-radius: 50%;
         margin: 5px;
         background-color: rgba(255, 255, 255, 0.3);
         display: inline-flex;
@@ -227,17 +255,28 @@ $clr-accent-grey: #333333;
 
         .active-dot {
 
-    background-color: $clr-primary-white;
-}
+            background-color: $clr-primary-white;
+
+        }
 
     }
 
     .app-demo {
 
-        margin-left: 50px;
-        margin-right: 100px;
-        max-width: 300px;
+        .slides {
 
+            margin-left: 50px;
+            margin-right: 100px;
+            max-width: 300px;
+            display: none;
+        }
+       
+        .active-slide {
+
+            transition: all 0.3s ease-in;
+            display: block;
+        
+        }
 
     }
 
@@ -267,11 +306,7 @@ $clr-accent-grey: #333333;
 
 
 
-.active-slide {
 
-    display: block;
-
-}
 
 
 .active {
