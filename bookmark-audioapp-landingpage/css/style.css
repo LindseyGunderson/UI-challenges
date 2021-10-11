@@ -189,8 +189,7 @@
   background-color: #E5E7E6;
 }
 .container .app-content .app-demo .slides {
-  margin-left: 50px;
-  margin-right: 100px;
+  margin: 50px;
   max-width: 300px;
   display: none;
 }
@@ -303,21 +302,21 @@
   }
   .container .app-content {
     text-align: center;
-    margin: 0;
+    margin-top: 20px;
   }
   .container .app-content .content-text {
     margin: 0 50px;
   }
   .container .app-content .content-text h2 {
-    font-size: 2em;
+    font-size: 2.2em;
+    margin-bottom: 1rem;
+  }
+  .container .app-content .content-text .store-btn {
+    width: 210px;
+    margin: 0.5rem auto;
   }
   .container .app-content .app-demo img {
     margin: 0;
-  }
-  .container .socials {
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 /*# sourceMappingURL=style.css.map */

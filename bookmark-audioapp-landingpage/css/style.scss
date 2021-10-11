@@ -265,8 +265,8 @@ desktop : 1440px
 
         .slides {
 
-            margin-left: 50px;
-            margin-right: 100px;
+            margin: 50px;
+            // margin-right: 100px;
             max-width: 300px;
             display: none;
         }
@@ -403,6 +403,11 @@ desktop : 1440px
 
 @include query(mobile){
 
+}
+
+
+@include query(mobile){
+
     .container {
 
         padding: 0;
@@ -427,19 +432,30 @@ desktop : 1440px
         }
 
         .app-content {
+
             text-align: center;
-            margin: 0;
+            margin-top: 20px;
 
             .content-text {
                 margin: 0 50px;
 
                 h2 {
 
-                    font-size: 2em;
+                    font-size: 2.2em;
+                    margin-bottom: 1rem;
+
+                }
+
+                .store-btn {
+                    
+                    
+                    width: 210px;
+                    margin: 0.5rem auto;
 
                 }
             
             }
+
 
 
         .app-demo {
@@ -449,13 +465,7 @@ desktop : 1440px
                 margin: 0;
             }
         }
- }
-        .socials {
-
-            left: 50%;
-            transform: translateX(-50%);
-
-        }
+    }
 
     }
 
