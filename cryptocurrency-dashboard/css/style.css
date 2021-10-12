@@ -103,7 +103,7 @@
   position: relative;
   width: 60px;
   height: 60px;
-  color: #5e6164;
+  color: #fff;
   font-size: 2em;
   cursor: pointer;
   display: -webkit-box;
@@ -164,6 +164,166 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.container .dashboard .overview-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+.container .dashboard .overview-container .overview-title {
+  padding-bottom: 1rem;
+  color: #fff;
+}
+.container .dashboard .overview-container .overview-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 250px);
+  gap: 20px;
+}
+.container .dashboard .overview-container .overview-grid .overview {
+  position: relative;
+  background-color: #343a40;
+  padding: 20px;
+}
+.container .dashboard .overview-container .overview-grid .overview .overview-total .total-transactions {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.container .dashboard .overview-container .overview-grid .overview .overview-total p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #191a1c;
+}
+.container .dashboard .overview-container .overview-grid .overview .overview-balance {
+  margin-bottom: 1.5rem;
+}
+.container .dashboard .overview-container .overview-grid .overview .overview-balance p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #191a1c;
+}
+.container .dashboard .overview-container .overview-grid .overview .overview-balance .account-balance {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+.container .dashboard .overview-container .overview-grid .overview .overview-balance .account-balance span {
+  font-size: 12px;
+}
+.container .dashboard .card-container {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+}
+.container .dashboard .card-container h2 {
+  padding-bottom: 1rem;
+  color: #fff;
+}
+.container .dashboard .card-container .card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  gap: 20px;
+}
+.container .dashboard .card-container .card-grid .card {
+  position: relative;
+  background-color: #343a40;
+  padding: 20px;
+}
+.container .dashboard .card-container .card-grid .card .coin-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+.container .dashboard .card-container .card-grid .card .coin-type p {
+  font-size: 16px;
+  color: #191a1c;
+  font-weight: 700;
+}
+.container .dashboard .card-container .card-grid .card .coin-type ion-icon {
+  font-size: 2em;
+  color: #fff;
+  background-color: #212529;
+  padding: 5px;
+  border: 4px double #050505;
+}
+.container .dashboard .card-container .card-grid .card .coin-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+.container .dashboard .transactions-container {
+  position: relative;
+  width: 35%;
+  padding: 20px;
+}
+.container .dashboard .transactions-container h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.container .dashboard .transactions-container .recent-transactions {
+  display: grid;
+  grid-template-columns: repeat(1, 500px);
+  background-color: #343a40;
+  padding: 20px;
+  gap: 20px;
+}
+.container .dashboard .transactions-container .recent-transactions .transaction-item {
+  background-color: #4b5259;
+  padding: 20px;
+}
+.container .dashboard .transactions-container .recent-transactions .transaction-item .transaction-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .dashboard .transactions-container .recent-transactions .transaction-item .transaction-details p {
+  font-size: 18px;
+}
+.container .dashboard .transactions-container .recent-transactions .transaction-item .transaction-details .transaction {
+  font-size: 18px;
+  margin-bottom: 2rem;
+}
+.container .dashboard .transactions-container .recent-transactions .transaction-item .transaction-details .transaction span {
+  color: green;
+  font-weight: 700;
+}
+.container .dashboard .transactions-container .recent-transactions .transaction-item .transaction-details .transaction span ion-icon {
+  font-size: 1.2em;
+}
+.container .dashboard .transactions-container .recent-transactions .transaction-item .transaction-code {
+  font-weight: 700;
 }
 .container .dashboard-active {
   width: calc(100% - 80px);
