@@ -73,6 +73,9 @@
   text-align: start;
   white-space: nowrap;
 }
+.container .nav-active {
+  width: 80px;
+}
 .container .dashboard {
   position: absolute;
   width: calc(100% - 250px);
@@ -161,5 +164,9 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.container .dashboard-active {
+  width: calc(100% - 80px);
+  left: 80px;
 }
 /*# sourceMappingURL=style.css.map */

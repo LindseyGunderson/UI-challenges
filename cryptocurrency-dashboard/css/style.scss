@@ -108,6 +108,13 @@ $clr-primary-blue: #7F95D1;
 
     } // end of nav styling
 
+    .nav-active {
+
+        width: 80px;
+    }
+
+
+
     // dashboard styling
     .dashboard {
 
@@ -203,4 +210,11 @@ $clr-primary-blue: #7F95D1;
 
     }
 
+    .dashboard-active {
+
+        width: calc(100% - 80px);
+        left: 80px;
+    }
+
 }
+
