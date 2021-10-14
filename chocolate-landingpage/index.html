@@ -10,5 +10,83 @@
 </head>
 <body>
     
+    <section>
+        <div class="background"></div>
+        <header>
+            <a href="#" class="logo">Coco Chocolates</a>
+            <ul class="navigation">
+                <li><a href="#" class="active-link">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">New Products</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+
+            <div class="content-text">
+
+                <h2>Crave Your Sweet Tooth</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis at illo error magni fugiat, magnam autem sint maxime unde consequatur iure mollitia modi! Asperiores consequatur consectetur temporibus repellendus, molestias nobis.</p>
+                <a href="#">Shop Now</a>
+            </div>
+
+            <div class="image-container">
+
+                <img src="images/sea-salt-coco.gif" alt="" srcset="">
+
+            </div>
+
+        </div>
+
+        <!-- thumbnails for slider -->
+        <ul class="thumbnails">
+            <li data-text="Sea Salt" class="active"><img src="images/sea-salt-coco.gif" alt="" srcset=""></li>
+            <li data-text="Berry" ><img src="images/berry-coco.gif" alt="" srcset=""></li>
+            <li data-text="Lemon"><img src="images/lemon-coco.gif" alt="" srcset=""></li>
+            <li data-text="Mint"><img src="images/mint-coco.gif" alt="" srcset=""></li>
+        </ul>
+
+
+        <ul class="socials">
+            <li> <a href=""> <ion-icon name="logo-facebook"></ion-icon> </a> </li>
+            <li> <a href="">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a> </li>
+            <li> <a href="">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a> </li>
+            <li> <a href="">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a> </li>
+        </ul>
+
+
+    </section>
+
+    <script>
+        const selected = document.querySelectorAll('.thumbnails li');
+
+        for(let i = 0; i < selected.length; i++){
+
+            selected[i].addEventListener('click', () => {
+
+                var clicked = 0;
+
+                while(clicked < selected.length){
+
+                    selected[clicked++].className = 'checked';
+
+                }
+
+                selected[i].className = 'checked active';
+
+            });
+        }
+
+    </script>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 </body>
 </html>
