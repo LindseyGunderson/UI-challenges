@@ -272,7 +272,7 @@ header {
 
 
 /* reponsive */
-@media(max-width: 991px)
+@media(max-width: 768px)
 {
 
     .background::before {
@@ -329,6 +329,20 @@ header {
         align-items: center;
         z-index: 9999;
         
+    }
+
+    .toggle span {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 3px;
+        margin-bottom: 6px;
+
+        background-color: #000;
+        border-radius: 10px;
+
     }
 
     .toggle.toggle-active {
