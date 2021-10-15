@@ -14,6 +14,8 @@
         <div class="background"></div>
         <header>
             <a href="#" class="logo">Coco Chocolates</a>
+
+            <div class="toggle"><ion-icon name="menu"></ion-icon></div>
             <ul class="navigation">
                 <li><a href="#" class="active-link">Home</a></li>
                 <li><a href="#">Shop</a></li>
@@ -33,7 +35,7 @@
 
             <div class="image-container">
 
-                <img src="images/sea-salt-coco.gif" alt="" srcset="">
+                <img src="images/sea-salt-coco.gif" alt="" srcset="" class="product-image">
 
             </div>
 
@@ -41,10 +43,10 @@
 
         <!-- thumbnails for slider -->
         <ul class="thumbnails">
-            <li data-text="Sea Salt" class="active"><img src="images/sea-salt-coco.gif" alt="" srcset=""></li>
-            <li data-text="Berry" ><img src="images/berry-coco.gif" alt="" srcset=""></li>
-            <li data-text="Lemon"><img src="images/lemon-coco.gif" alt="" srcset=""></li>
-            <li data-text="Mint"><img src="images/mint-coco.gif" alt="" srcset=""></li>
+            <li data-text="Sea Salt" class="active"><img src="images/sea-salt-coco.gif" onclick="imageSlider(this.src); changeBackgroundColor('#00B9AE')"></li>
+            <li data-text="Berry" ><img src="images/berry-coco.gif" onclick="imageSlider(this.src); changeBackgroundColor('#E39695')"></li>
+            <li data-text="Lemon"><img src="images/lemon-coco.gif" onclick="imageSlider(this.src); changeBackgroundColor('#FFF7AE')"></li>
+            <li data-text="Mint"><img src="images/mint-coco.gif" onclick="imageSlider(this.src); changeBackgroundColor('#7FC6A4')"></li>
         </ul>
 
 
@@ -65,6 +67,35 @@
     </section>
 
     <script>
+
+        // toggle hamburger menu
+        const menu = document.querySelector('.toggle');
+
+        const nav = document.querySelector('.navigation');
+
+        menu.addEventListener('click', () => {
+
+            menu.classList.toggle('toggle-active');
+            nav.classList.toggle('active');
+
+        })
+
+        // change product image based on the thumbnail clicked
+        function imageSlider(image) {
+            document.querySelector('.product-image').src = image;
+        }
+
+        // change background color to match product
+        function changeBackgroundColor(color) {
+
+            const bgColor = document.querySelector('.background');
+
+            bgColor.style.background = color;
+
+
+        }
+
+        // active state for thumbnails
         const selected = document.querySelectorAll('.thumbnails li');
 
         for(let i = 0; i < selected.length; i++){
