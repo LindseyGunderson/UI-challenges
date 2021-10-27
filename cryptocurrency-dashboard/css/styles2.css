@@ -176,15 +176,25 @@ body {
 .bottom {
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.5fr;
     grid-template-rows: 0.3fr 1fr;
     grid-template-areas:
-                        "transaction-title market-title" 
-                        "transactions market";
+                        "transaction-title send-title market-title" 
+                        "transactions send market";
     gap: 40px;
     margin-top: 2rem;
 
 }
+
+.send {
+
+    grid-area: send;
+    background-color: var(--clr-primary-lightGrey);
+    padding: 20px;
+
+}
+
+
 
 /* ---------- transaction styling ---------- */
 
@@ -238,7 +248,40 @@ body {
     font-size: 18px; 
 }
 
+
+
+
+
+/* ---------- market styling ---------- */
+
 .market {
     grid-area: market;
-    background-color: powderblue;
+    background-color: var(--clr-primary-lightGrey);
+    padding: 20px;
+}
+
+.market-details {
+
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid #000;
+
+}
+
+.changes{
+
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: green;
+
+}
+
+.changes ion-icon {
+
+    padding-right: 0.5rem;
 }
