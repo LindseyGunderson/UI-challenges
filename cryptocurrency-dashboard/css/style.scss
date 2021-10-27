@@ -217,9 +217,7 @@ $clr-primary-blue: #7F95D1;
             width: max-content;
             padding: 50px;
 
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
+            display: grid;
 
             .overview-title {
 
@@ -232,7 +230,6 @@ $clr-primary-blue: #7F95D1;
                 background-color: pink;
                 display: grid;
                 grid-template-columns: repeat(1, 250px);
-                grid-template-rows: 25px 135px;
                 gap: 20px;
 
                 .overview {

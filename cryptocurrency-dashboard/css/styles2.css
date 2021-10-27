@@ -1,0 +1,151 @@
+/*  import google font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;700&display=swap');
+
+:root {
+     /* font family */
+--ff-noto: 'Noto Sans Mono', monospace;
+
+/* // color palette */
+
+--primary-darkGrey: #212529;
+--clr-primary-lightGrey: #343a40;
+--clr-primary-blue: #7F95D1;
+
+}
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-noto);
+
+}
+
+body {
+
+    font-family: var(--ff-noto);
+    background: var(--primary-darkGrey);
+}
+
+.container {
+
+    display: grid;
+    grid-template-areas: 
+                        "account-overview wallet-currency";
+    gap: 20px;
+}
+
+
+/* ------------------ account overview styling ------------------ */
+.account-overview {
+
+    grid-area: account-overview;
+    width: 150px;
+    grid-template-columns: repeat(1, minmax(250px, 250px));
+    background-color: var(--clr-primary-lightGrey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: start;
+
+}
+
+.overview-balance {
+                        
+    margin-bottom: 0.5rem;
+}
+
+.overview-balance p {
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #191a1c;
+}
+
+.overview-balance .account-balance {
+
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.overview-balance .account-balance span {
+
+    font-size: 12px;
+}
+
+.overview-total  p {
+
+    font-size: 13px;
+    font-weight: bold;
+    color: #191a1c;
+
+}
+
+
+
+.overview-total .total-transactions {
+
+        font-size: 22px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+
+
+
+
+/* ------------------ wallet styling ------------------ */
+.wallet-currency {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+
+}
+
+.card {
+
+    background-color: var(--clr-primary-lightGrey);
+    border: 8px double #000;
+    padding: 20px;
+}
+
+.coin-type {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.coin-type p {
+
+        font-size: 16px;
+        color: #191a1c;
+        font-weight: 700;
+
+}
+
+.coin-type span ion-icon {
+
+    font-size: 2em;
+    color: #fff;
+    background-color: #212529;
+    padding: 5px;
+    border: 4px double #050505;
+
+}
+
+.coin-info {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+}
