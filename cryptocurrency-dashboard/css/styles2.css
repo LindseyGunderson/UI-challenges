@@ -30,10 +30,24 @@ body {
 
 .container {
 
-    display: grid;
+    margin: 5% 5%;
+    /* display: grid;
     grid-template-areas: 
                         "account-overview wallet-currency";
-    gap: 20px;
+    gap: 20px; */
+}
+
+
+.top {
+
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.2 1fr;
+    grid-template-areas:
+                        "title title" 
+                        "account-overview wallet-currency";
+    gap: 40px;
+
 }
 
 
@@ -41,13 +55,21 @@ body {
 .account-overview {
 
     grid-area: account-overview;
-    width: 150px;
-    grid-template-columns: repeat(1, minmax(250px, 250px));
+    display: grid;
+    grid-template-columns: 250px;
+    grid-auto-rows: 150px;
+   
+
+}
+
+.overview-info {
+
     background-color: var(--clr-primary-lightGrey);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: start;
+    align-content: center;
+    padding: 20px;
 
 }
 
@@ -101,7 +123,7 @@ body {
 .wallet-currency {
 
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 
 }
@@ -148,4 +170,75 @@ body {
     align-items: center;
     color: #fff;
 
+}
+
+
+.bottom {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 1fr;
+    grid-template-areas:
+                        "transaction-title market-title" 
+                        "transactions market";
+    gap: 40px;
+    margin-top: 2rem;
+
+}
+
+/* ---------- transaction styling ---------- */
+
+.transactions {
+
+    grid-area: transactions;
+    background-color: var(--clr-primary-lightGrey);
+    padding: 20px;
+}
+
+.transaction-item {
+
+    background-color:rgb(75, 82, 89);
+    
+    margin-bottom: 10px;
+}
+
+.transaction-item .transaction-details {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 50px;
+
+}
+
+.transaction-item .transaction-details .transaction {
+
+    font-size: 18px;    
+
+}
+
+
+.transaction-item .transaction-details .transaction span {
+        
+    color: green;
+    font-weight: 700;
+
+}
+
+.transaction-code {
+
+    font-weight: 700;
+    padding: 10px;
+}
+
+.transaction-item .transaction-details p {
+
+    font-size: 18px; 
+}
+
+.market {
+    grid-area: market;
+    background-color: powderblue;
 }
