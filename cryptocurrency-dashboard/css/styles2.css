@@ -70,7 +70,7 @@ body {
     justify-content: center;
     align-content: center;
     padding: 20px;
-
+    border: 8px double #000;
 }
 
 .overview-balance {
@@ -191,6 +191,7 @@ body {
     grid-area: send;
     background-color: var(--clr-primary-lightGrey);
     padding: 20px;
+    border: 8px double #000;
 
 }
 
@@ -253,10 +254,31 @@ body {
 
     font-size: 15px;
     background-color: var(--primary-darkGrey);
+    border: 3px solid var(--primary-darkGrey);
     color: #fff;
     padding: 0.7rem 0;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
 }
+
+.send-option button ion-icon {
+
+    padding-left: 0.5rem;
+
+}
+
+.send-option button:hover {
+
+    background-color: var(--clr-primary-blue);
+    border: 3px solid rgba(10, 10, 10, 0.494);
+    color: #000;
+}
+
 
 .disclosure {
 
@@ -272,13 +294,16 @@ body {
     grid-area: transactions;
     background-color: var(--clr-primary-lightGrey);
     padding: 20px;
+    border: 8px double #000;
 }
 
 .transaction-item {
 
     background-color:rgb(75, 82, 89);
-    
+    border: 1px solid #000;
+    padding: 10px;
     margin-bottom: 10px;
+
 }
 
 .transaction-item .transaction-details {
@@ -327,6 +352,7 @@ body {
     grid-area: market;
     background-color: var(--clr-primary-lightGrey);
     padding: 20px;
+    border: 8px double #000;
 }
 
 .market-details {
