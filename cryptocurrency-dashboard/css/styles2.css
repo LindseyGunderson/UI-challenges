@@ -176,11 +176,11 @@ body {
 .bottom {
 
     display: grid;
-    grid-template-columns: 1fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 0.3fr 1fr;
     grid-template-areas:
                         "transaction-title send-title market-title" 
-                        "transactions send market";
+                        "send transactions market";
     gap: 40px;
     margin-top: 2rem;
 
@@ -195,6 +195,75 @@ body {
 }
 
 
+.type {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.type select {
+
+    background-color: var(--clr-primary-lightGrey);
+    width: 50%;
+    text-align: center;
+    font-size: 15px;
+    padding: 0.2rem;
+    color: #fff;
+
+}
+
+.amount {
+
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.amount input {
+
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--clr-primary-lightGrey);
+    border: 1px solid rgb(109, 109, 109);
+    color: #fff;
+}
+
+.send-option {
+
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.send-option input {
+
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: var(--clr-primary-lightGrey);
+    border: 1px solid rgb(109, 109, 109);
+    color: #fff;
+}
+
+.send-option button {
+
+    font-size: 15px;
+    background-color: var(--primary-darkGrey);
+    color: #fff;
+    padding: 0.7rem 0;
+
+}
+
+.disclosure {
+
+    font-size: 12px;
+    margin: 0.5rem 0;
+    text-align: center;
+}
 
 /* ---------- transaction styling ---------- */
 
